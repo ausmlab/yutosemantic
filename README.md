@@ -45,15 +45,18 @@ Coming Soon! We will upload the downloading link by the end of September!
 
 
 ### Citation
-@article{yoo2023yuto,
-  title={Yuto Semantic: a Large Scale Aerial LIDAR Dataset for Semantic Segmentation},
-  author={Yoo, S and Ko, C and Sohn, G and Lee, H},
-  journal={The International Archives of the Photogrammetry, Remote Sensing and Spatial Information Sciences},
-  volume={48},
-  pages={209--215},
-  year={2023},
-  publisher={Copernicus GmbH}
-}
+If you find our work useful in your research, please consider citing:
+```
+      @article{yoo2023yuto,
+        title={Yuto Semantic: a Large Scale Aerial LIDAR Dataset for Semantic Segmentation},
+        author={Yoo, S and Ko, C and Sohn, G and Lee, H},
+        journal={The International Archives of the Photogrammetry, Remote Sensing and Spatial Information Sciences},
+        volume={48},
+        pages={209--215},
+        year={2023},
+        publisher={Copernicus GmbH}
+      }
+```
 
 ### Acknowledgements
 This data set is collected with Teledyne Optech's Galaxy LiDAR.
