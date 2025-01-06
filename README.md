@@ -41,7 +41,7 @@ New results will be updated.
 
 
 ### Downloads
-Coming Soon! We will upload the downloading link by the end of September!
+- [YUTO Semantic](https://huggingface.co/datasets/ausmlab/yuto-semantic)
 
 
 ### Citation
@@ -60,9 +60,3 @@ If you find our work useful in your research, please consider citing:
 
 ### Acknowledgements
 This data set is collected with Teledyne Optech's Galaxy LiDAR.
-
-
-### To DO List
-* Sharing downloading link.
-* Uploading training code.
-* releasing rest of missions.
