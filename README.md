@@ -30,14 +30,33 @@ At this time, we are releasing one mission, Galaxy 2018 Fall. We are planning to
 * Scan Angle: The scan angle of each point, indicating the angle at which the laser beam hit the target.
 * Class: The label assigned to each point, representing the semantic class or category of the object or surface the point belongs to.
 
+### Test Split
+The results are based on the following test split.
+<details> <summary><strong>self.test_file_name = [
+    "618175.81_4846250.00__618775.81_4846850.00",
+    "618775.81_4844450.00__619375.81_4845050.00",
+    "618175.81_4846850.00__618775.81_4847450.00",
+    "618175.81_4848650.00__618775.81_4849250.00",
+    "618175.81_4847450.00__618775.81_4848050.00",
+    "618775.81_4845050.00__619375.81_4845650.00",
+    "618175.81_4848050.00__618775.81_4848650.00",
+    "618775.81_4845650.00__619375.81_4846250.00",
+    "618775.81_4846250.00__619375.81_4846850.00"
+]</strong></summary>
+
 ### Semantic Segmentation Results
 New results will be updated.
 
-| Method          | OA     | mIoU   | ground   | vegetaion | building | water | car | truck   | traffic road    | sidewalk  | parking |
-|------------------|--------|--------|--------|----------|---------|----------|-----------|--------|--------|--------|--------|
-|RandLA (Hu et al., 2020)| 84.19| 58.37| 80.61| 94.44| 95.39| 3.34| 74.59| 13.87| 78.10| 23.43| 61.56|
-|KPConv (Thomas et al., 2019)| 85.22| 56.14| 86.94| 96.25| 94.01| 0.00| 84.02| 0.00| 79.93| 3.26| 60.83|
-|EyeNet (Yoo et al., 2023)| 87.41| 63.44| 86.26| 95.94| 96.78| 13.61| 83.02| 14.26| 84.65| 31.08| 65.34|
+| Method                             | OA    | mIoU  | ground | vegetation | building | water | car   | truck | traffic road | sidewalk | parking |
+|------------------------------------|-------|-------|--------|-----------|----------|-------|-------|-------|--------------|----------|---------|
+| PointNet (Qi et al., 2017)         |  --   | 33.22 | 74.50  | 76.80     | 63.30    | 0.00  | 39.94 | 0.00  | 15.10        | 0.00     | 29.80   |
+| PointNet++ (Qi et al., 2017)       |  --   | 26.16 | 68.10  | 66.70     | 31.80    | 0.00  | 14.10 | 0.00  | 26.00        | 2.50     | 26.20   |
+| SPG (Landrieu et al., 2018)        |  --   | 36.68 | 79.31  | 97.92     | 0.00     | 57.37 | 0.00  | 36.92 | 0.39         | 39.51    | 0.00    |
+| SFL-Net (Li et al., 2023)          |  --   | 51.05 | 80.91  | 94.10     | 88.33    | 0.00  | 74.47 | 0.00  | 53.71        | 23.08    | 44.81   |
+| RandLA (Hu et al., 2020)           | 84.19 | 58.37 | 80.61  | 94.44     | 95.39    | 3.34  | 74.59 | 13.87 | 78.10        | 23.43    | 61.56   |
+| KPConv (Thomas et al., 2019)       | 85.22 | 56.14 | 86.94  | 96.25     | 94.01    | 0.00  | 84.02 | 0.00  | 79.93        | 3.26     | 60.83   |
+| EyeNet (Yoo et al., 2023)          | 87.41 | 63.44 | 86.26  | 95.94     | 96.78    | 13.61 | 83.02 | 14.26 | 84.65        | 31.08    | 65.34   |
+
 
 
 ### Downloads
