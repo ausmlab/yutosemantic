@@ -32,7 +32,8 @@ At this time, we are releasing one mission, Galaxy 2018 Fall. We are planning to
 
 ### Test Split
 The results are based on the following test split.
-<details> <summary><strong>self.test_file_name = [
+<details> <summary><strong>Test Split</strong></summary>
+self.test_file_name = [
     "618175.81_4846250.00__618775.81_4846850.00",
     "618775.81_4844450.00__619375.81_4845050.00",
     "618175.81_4846850.00__618775.81_4847450.00",
@@ -42,7 +43,8 @@ The results are based on the following test split.
     "618175.81_4848050.00__618775.81_4848650.00",
     "618775.81_4845650.00__619375.81_4846250.00",
     "618775.81_4846250.00__619375.81_4846850.00"
-]</strong></summary>
+]
+</details>
 
 ### Semantic Segmentation Results
 New results will be updated.
