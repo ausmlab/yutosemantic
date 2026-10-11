@@ -9,7 +9,7 @@ YUTO Semantic is a multi-mission large-scale aerial LiDAR dataset specifically d
 
 <p align="center"> <img src="imgs/YUTO release date.PNG" width="100%"> </p>
 
-The campus was flown in three missions with a Teledyne Optech Galaxy Prime sensor: September 2018, December 2019 and May 2021. **The current release (v1) contains one mission, Galaxy 2018 Fall.** Labels for the other two missions will follow. Details of the dataset can be found in the [ISPRS GSW 2023 paper](https://doi.org/10.5194/isprs-archives-XLVIII-1-W2-2023-209-2023).
+The campus was flown in three missions with Teledyne Optech Galaxy airborne LiDAR: September 2018, December 2019 and May 2021. **The current release (v1) contains one mission, Galaxy 2018 Fall.** Labels for the other two missions will follow. Details of the dataset can be found in the [ISPRS GSW 2023 paper](https://doi.org/10.5194/isprs-archives-XLVIII-1-W2-2023-209-2023).
 
 > **Data format.** v1 is distributed on Hugging Face as 41 `.las` tiles (600 m × 600 m, about 34 GB in total). The paper mentions `.ply`; the released files are `.las`.
 
@@ -35,6 +35,8 @@ The campus was flown in three missions with a Teledyne Optech Galaxy Prime senso
 ### Train / Test Split
 Following the paper, the 41 tiles are split into **32 training tiles** and **9 test tiles**. The tile lists are in [`splits/train.txt`](splits/train.txt) and [`splits/test.txt`](splits/test.txt). All results below use this split. No official validation split is defined; if you need one, hold it out from the training tiles and report which tiles you used.
 <details> <summary><strong>Test tiles</strong></summary>
+
+```python
 self.test_file_name = [
     "618175.81_4846250.00__618775.81_4846850.00",
     "618775.81_4844450.00__619375.81_4845050.00",
@@ -46,6 +48,8 @@ self.test_file_name = [
     "618775.81_4845650.00__619375.81_4846250.00",
     "618775.81_4846250.00__619375.81_4846850.00"
 ]
+```
+
 </details>
 
 ### Semantic Segmentation Results
@@ -62,7 +66,7 @@ Metrics are OA (%), mIoU (%) and per-class IoU (%) on the 9 test tiles. mIoU is 
 | EyeNet (Yoo et al., 2023)          | 87.41 | 63.44 | 86.26  | 95.94     | 96.78    | 13.61 | 83.02 | 14.26 | 84.65        | 31.08    | 65.34   |
 
 * RandLA, KPConv and EyeNet: Table 2 of the YUTO Semantic paper. RandLA and KPConv are internal runs with hyperparameters taken from SensatUrban/DALES, so they are not fully tuned.
-* PointNet, PointNet++, SPG and SFL-Net: additional internal runs by the AUSM Lab, not yet published.
+* PointNet, PointNet++, SPG and SFL-Net: not reported in the paper. Experimental settings will be documented.
 * ⚠️ SPG: the reported mIoU (36.68) does not match the mean of its per-class IoUs (34.60). This row is under review.
 
 
@@ -70,7 +74,7 @@ Metrics are OA (%), mIoU (%) and per-class IoU (%) on the 9 test tiles. mIoU is 
 ### Downloads
 - [YUTO Semantic on Hugging Face](https://huggingface.co/datasets/ausmlab/yuto-semantic)
 
-> The paper links to `github.com/Yacovitch/YUTO_Semantic`. That is the original author's copy. **This repository (`ausmlab/yutosemantic`) is the official, maintained one.**
+> The paper links to `github.com/Yacovitch/YUTO_Semantic`. That is an earlier copy. **This repository (`ausmlab/yutosemantic`) is the official, maintained one.**
 
 ### License
 - **Dataset** (point clouds and labels): [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/), as stated on Hugging Face. Non-commercial use only.
